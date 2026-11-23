@@ -189,7 +189,9 @@ if [[ ${#NOT_FOUND[@]} -gt 0 ]]; then
   echo
 fi
 
-if [[ -n "$OUT_FILE" ]]; then
+if [[ -n "$OUT_FILE" && ${#CMDS[@]} -eq 0 ]]; then
+  echo "没有可升级对象，跳过写出 $OUT_FILE"
+elif [[ -n "$OUT_FILE" ]]; then
   {
     echo "#!/usr/bin/env bash"
     echo "# 自动生成：$(date '+%F %T')  账号 $ACCOUNT_ID  区域 $REGION"

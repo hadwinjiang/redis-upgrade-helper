@@ -15,7 +15,7 @@
 ./redis-upgrade-plan.sh -f ids.txt -o upgrade.sh
 
 # 指定 profile / region
-AWS_PROFILE=geely-prod AWS_REGION=cn-north-1 ./redis-upgrade-plan.sh -f ids.txt
+AWS_PROFILE=geely-prod AWS_REGION=eu-central-1 ./redis-upgrade-plan.sh -f ids.txt
 ```
 
 ## 输出
